@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListaDocentes">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="409dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="2dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SISTEMA COLEGIO"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="372dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGuardar2"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="372dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="8dp"
+            android:text="Grabar"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="#010A56"
+            app:icon="@drawable/guardar2"
+            app:iconPadding="8dp"
+            app:iconTint="@android:color/white" />
+    </LinearLayout>
+
+    <!-- para listar los docentes con sus imagenes y datos-->
+    <LinearLayout
+        android:layout_width="364dp"
+        android:layout_height="501dp"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+        <!-- Lista de Docentes -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewDocentes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

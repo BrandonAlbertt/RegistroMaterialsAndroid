@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".itemDocente">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:weightSum="1">
+
+        <!-- Imagen del Docente -->
+        <ImageView
+            android:id="@+id/imageDocente"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:contentDescription="Imagen Docente" />
+
+        <!-- Nombre del Docente -->
+        <TextView
+            android:id="@+id/nombreDocente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"/>
+
+        <!-- Apellido Paterno del Docente -->
+        <TextView
+            android:id="@+id/paternoDocente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apellido Paterno"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"/>
+
+        <!-- Apellido Materno del Docente -->
+        <TextView
+            android:id="@+id/maternoDocente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apellido Materno"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

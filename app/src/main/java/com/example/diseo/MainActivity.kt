@@ -1,7 +1,9 @@
 package com.example.diseo
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -17,6 +19,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var edtPassword: TextInputEditText
     private lateinit var btnLogin: MaterialButton
     private lateinit var txtTitle: MaterialTextView
+    private lateinit var btnRegistro: TextView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         edtPassword = findViewById(R.id.edtPassword)
         btnLogin = findViewById(R.id.btnLogin)
         txtTitle = findViewById(R.id.txtTitle)
+        btnRegistro = findViewById(R.id.btnRegistro)
 
         // Configuramos el botón para realizar la acción de inicio de sesión
         btnLogin.setOnClickListener {
@@ -48,6 +53,11 @@ class MainActivity : AppCompatActivity() {
                 // Aquí pondrías la lógica para procesar el inicio de sesión
                 txtTitle.text = "Iniciando sesión.."
             }
+        }
+
+        btnRegistro.setOnClickListener{
+            var intent = Intent(this, Registro::class.java)
+            startActivity(intent)
         }
     }
 
